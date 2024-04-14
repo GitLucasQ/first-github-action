@@ -4,5 +4,6 @@ jobs:
   execude-code:
     runs-on: ubuntu-lastest
     steps:
+    - uses: actions/checkout@v3
     - name: run-script
-    run: node index.js
+      run: node index.js
