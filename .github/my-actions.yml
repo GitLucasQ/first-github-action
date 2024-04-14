@@ -1,0 +1,8 @@
+name: "my-actions"
+on: [push]
+jobs:
+  execude-code:
+    runs-on: ubuntu-lastest
+    steps:
+    - name: run-script
+    run: node index.js
