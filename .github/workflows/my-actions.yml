@@ -1,12 +1,18 @@
 name: "my-actions"
-on: [push]
+on:
+  push:
+    branches: ["master"]
+  pull_request:
+    branches: ["master"]
 jobs:
   execude-code:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 20
-    - name: run-script
-      run: node index.js
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+      - name: run-script
+        run: node index.js
+      - name: print final message
+        run: echo "Workflow finish succesfully"
