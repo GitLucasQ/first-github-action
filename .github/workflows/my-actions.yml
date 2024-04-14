@@ -10,8 +10,10 @@ on:
         description: "¿Cuál card se abordó?"
         required: true
         type: string
+  schedule:
+    - cron: "59 12,24 * * *"
 jobs:
-  execude-code:
+  execute-code:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -22,3 +24,8 @@ jobs:
         run: node index.js
       - name: print final message
         run: echo "Workflow finish succesfully"
+  execute-manually-workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Card number
+        run: echo ${{ inputs.card-tomada }}
