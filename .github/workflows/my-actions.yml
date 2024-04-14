@@ -11,7 +11,7 @@ on:
         required: true
         type: string
   schedule:
-    - cron: "59 12,24 * * *"
+    - cron: "59 12,23 * * *"
 jobs:
   execute-code:
     runs-on: ubuntu-latest
