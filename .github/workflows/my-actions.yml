@@ -4,6 +4,12 @@ on:
     branches: ["master"]
   pull_request:
     branches: ["master"]
+  workflow_dispatch:
+    inputs:
+      card-tomada:
+        description: "¿Cuál card se abordó?"
+        required: true
+        type: string
 jobs:
   execude-code:
     runs-on: ubuntu-latest
