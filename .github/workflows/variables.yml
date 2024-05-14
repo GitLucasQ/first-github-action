@@ -9,4 +9,4 @@ jobs:
       - name: Uso de variable interna
         run: echo "El token es $variable_interna"
       - name: Uso de variable externa
-        run: echo "La API KEY es {{ vars.APIKEY }}"
+        run: echo "La API KEY es ${{ vars.APIKEY }}"
